@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Муравей</title>
-  <style>
-    html, body {
-      margin: 0; padding: 0;
-      overflow: hidden;
-      background: #222;
-      height: 100%;
-      touch-action: none;      /* отключаем скролл/зум по свайпам */
-    }
-    canvas {
-      display: block;
-      background: #8fbf5f;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Муравей</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #222;
+            height: 100%;
+            touch-action: none;
+            /* отключаем скролл/зум по свайпам */
+        }
+
+        canvas {
+            display: block;
+            background: #8fbf5f;
+        }
+    </style>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#8fbf5f">
+    <link rel="apple-touch-icon" href="icon-512.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
+
 <body>
-  <canvas id="game"></canvas>
-  <script src="game.js"></script>
+    <canvas id="game"></canvas>
+    <script src="game.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
 </body>
+
 </html>
