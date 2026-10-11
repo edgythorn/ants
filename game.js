@@ -19,8 +19,10 @@ function update() {
   if (keys['ArrowUp'])    ant.y -= ant.speed;
   if (keys['ArrowDown'])  ant.y += ant.speed;
 
-  ant.x = Math.max(ant.size, Math.min(canvas.width  - ant.size, ant.x));
-  ant.y = Math.max(ant.size, Math.min(canvas.height - ant.size, ant.y));
+  if (ant.x < 0) ant.x = canvas.width;
+  if (ant.x > canvas.width) ant.x = 0;
+  if (ant.y < 0) ant.y = canvas.height;
+  if (ant.y > canvas.height) ant.y = 0;
 }
 
 function draw() {
