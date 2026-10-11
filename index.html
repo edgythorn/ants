@@ -2,14 +2,24 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Муравей</title>
   <style>
-    body { margin: 0; background: #222; display: flex; justify-content: center; align-items: center; height: 100vh; }
-    canvas { background: #8fbf5f; border: 2px solid #333; }
+    html, body {
+      margin: 0; padding: 0;
+      overflow: hidden;
+      background: #222;
+      height: 100%;
+      touch-action: none;      /* отключаем скролл/зум по свайпам */
+    }
+    canvas {
+      display: block;
+      background: #8fbf5f;
+    }
   </style>
 </head>
 <body>
-  <canvas id="game" width="640" height="480"></canvas>
+  <canvas id="game"></canvas>
   <script src="game.js"></script>
 </body>
 </html>
