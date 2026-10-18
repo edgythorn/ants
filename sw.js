@@ -1,9 +1,12 @@
-const CACHE = 'ant-v1';
+const CACHE = 'ant-v3';
 const FILES = [
   './',
   './index.html',
   './game.js',
-  './ant.png',
+  './images/ant.png',
+  './images/berry.png',
+  './images/sugar.png',
+  './images/web.png',
   './icon-512.png',
   './manifest.json'
 ];
